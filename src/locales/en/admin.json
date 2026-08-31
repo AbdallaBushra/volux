@@ -1,0 +1,14 @@
+{
+  "opportunities": {
+    "title": "Opportunities",
+    "subtitle": "Manage and monitor all volunteer opportunities",
+    "createTraining": "Create Training Opportunity",
+    "trainingHours": "Training Hours",
+    "trainingLevel": "Training Level",
+    "certificateEligible": "Certificate Eligible"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Platform control and governance"
+  }
+}

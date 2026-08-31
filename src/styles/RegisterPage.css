@@ -1,0 +1,392 @@
+/* ====================================
+   BASE STYLES
+   ==================================== */
+body {
+  background-color: #f4eadf;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #3b2b22;
+}
+
+/* ====================================
+   LOGIN PAGE
+   ==================================== */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.login-page.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ====================================
+   ORGANIZATION SECTION
+   ==================================== */
+.organization-section {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.organization-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.org-badge {
+  background-color: #c78b58;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.organization-section h1 {
+  font-size: 32px;
+  margin: 10px 0;
+  font-family: "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.organization-section p {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* ====================================
+   LOGIN HEADER IMAGE
+   ==================================== */
+.login-header-image {
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.login-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.image-overlay .login-badge {
+  background-color: #c78b58;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.image-overlay h1 {
+  font-size: 28px;
+  margin: 5px 0;
+  font-family: "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.image-overlay p {
+  font-size: 15px;
+  opacity: 0.9;
+  max-width: 500px;
+  margin-top: 5px;
+}
+
+/* ====================================
+   LOGIN CARD
+   ==================================== */
+.login-card {
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  border: 2px solid #d9b98c;
+}
+
+/* ====================================
+   LOGIN HEADER TEXT
+   ==================================== */
+.login-card h2 {
+  color: #3b2b22;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+}
+
+.login-card p {
+  color: #7a5b44;
+  font-size: 15px;
+  margin: 0 0 25px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ====================================
+   FORM STYLES
+   ==================================== */
+form {
+  margin-top: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4b3a2c;
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 2px solid #d9b98c;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #fcf9f6;
+  color: #3b2b22;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c78b58;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(199, 139, 88, 0.1);
+}
+
+/* ====================================
+   LOGIN BUTTON
+   ==================================== */
+.btn-primary {
+  background-color: #c78b58;
+  color: white;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Times New Roman", serif;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #a97242;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(199, 139, 88, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ====================================
+   REGISTER LINK
+   ==================================== */
+.new-account {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #e8ded0;
+  text-align: center;
+  color: #7c6a58;
+  font-size: 15px;
+}
+
+.new-account a {
+  color: #3c2b20;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.new-account a:hover {
+  color: #c78b58;
+  text-decoration: underline;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+@media (max-width: 768px) {
+  .organization-section {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .organization-section h1 {
+    font-size: 26px;
+  }
+  
+  .organization-section p {
+    font-size: 15px;
+  }
+  
+  .login-header-image {
+    height: 180px;
+    max-width: 600px;
+    margin-bottom: 25px;
+  }
+  
+  .image-overlay h1 {
+    font-size: 24px;
+  }
+  
+  .image-overlay p {
+    font-size: 14px;
+  }
+  
+  .login-card {
+    padding: 35px 30px;
+    max-width: 420px;
+  }
+  
+  .login-card h2 {
+    font-size: 24px;
+  }
+  
+  .login-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .organization-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .organization-section h1 {
+    font-size: 22px;
+  }
+  
+  .organization-section p {
+    font-size: 14px;
+  }
+  
+  .org-badge, .image-overlay .login-badge {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+  
+  .login-header-image {
+    height: 160px;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .image-overlay h1 {
+    font-size: 20px;
+  }
+  
+  .image-overlay p {
+    font-size: 13px;
+  }
+  
+  .login-card {
+    padding: 30px 25px;
+    max-width: 380px;
+  }
+  
+  .login-card h2 {
+    font-size: 22px;
+  }
+  
+  .login-card p {
+    font-size: 13px;
+  }
+  
+  input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* في RegisterPageBoth.css */
+.registration-error {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #c53030;
+  font-size: 14px;
+  animation: slideDown 0.3s ease;
+}
+
+.error-icon {
+  font-size: 18px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

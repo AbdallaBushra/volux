@@ -1,0 +1,84 @@
+mutation CreateDemoData @transaction @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  organization_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      name: "Demo Organization 1",
+      contactEmail: "contact1@example.com",
+      createdAt: "2024-04-01T00:00:00Z"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      name: "Demo Organization 2",
+      contactEmail: "contact2@example.com",
+      createdAt: "2024-04-02T00:00:00Z"
+    }
+  ])
+  user_insertMany(data: [
+    {
+      id: "650e8400-e29b-41d4-a716-446655440000",
+      displayName: "Demo User 1",
+      email: "user1@example.com",
+      userType: "volunteer"
+    },
+    {
+      id: "650e8400-e29b-41d4-a716-446655440001",
+      displayName: "Demo User 2",
+      email: "user2@example.com",
+      userType: "volunteer"
+    }
+  ])
+  opportunity_insertMany(data: [
+    {
+      id: "750e8400-e29b-41d4-a716-446655440000",
+      organizationId: "550e8400-e29b-41d4-a716-446655440000",
+      title: "Demo Opportunity 1",
+      description: "Example opportunity 1",
+      location: "Anytown, USA",
+      startTime: "2024-05-01T10:00:00Z",
+      endTime: "2024-05-01T12:00:00Z",
+      status: "open",
+      createdAt: "2024-04-15T00:00:00Z"
+    },
+    {
+      id: "750e8400-e29b-41d4-a716-446655440001",
+      organizationId: "550e8400-e29b-41d4-a716-446655440001",
+      title: "Demo Opportunity 2",
+      description: "Example opportunity 2",
+      location: "Somecity, USA",
+      startTime: "2024-05-02T14:00:00Z",
+      endTime: "2024-05-02T16:00:00Z",
+      status: "open",
+      createdAt: "2024-04-16T00:00:00Z"
+    }
+  ])
+  volunteerApplication_insertMany(data: [
+    {
+      opportunityId: "750e8400-e29b-41d4-a716-446655440000",
+      userId: "650e8400-e29b-41d4-a716-446655440000",
+      applicationDate: "2024-04-20T00:00:00Z",
+      createdAt: "2024-04-20T00:00:00Z",
+      status: "pending"
+    },
+    {
+      opportunityId: "750e8400-e29b-41d4-a716-446655440001",
+      userId: "650e8400-e29b-41d4-a716-446655440001",
+      applicationDate: "2024-04-21T00:00:00Z",
+      createdAt: "2024-04-21T00:00:00Z",
+      status: "pending"
+    }
+  ])
+ volunteerShift_insertMany(data: [
+    {
+      opportunityId: "750e8400-e29b-41d4-a716-446655440000",
+      startTime: "2024-05-01T10:00:00Z",
+      endTime: "2024-05-01T12:00:00Z",
+      capacity: 5
+    },
+    {
+      opportunityId: "750e8400-e29b-41d4-a716-446655440001",
+      startTime: "2024-05-02T14:00:00Z",
+      endTime: "2024-05-02T16:00:00Z",
+      capacity: 3
+    }
+  ])
+}

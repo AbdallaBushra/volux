@@ -1,0 +1,14 @@
+{
+  "opportunities": {
+    "title": "الفرص",
+    "subtitle": "إدارة ومتابعة جميع الفرص التطوعية",
+    "createTraining": "إنشاء فرصة تدريبية",
+    "trainingHours": "ساعات التدريب",
+    "trainingLevel": "مستوى التدريب",
+    "certificateEligible": "شهادة معتمدة"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "التحكم والإدارة في المنصة"
+  }
+}

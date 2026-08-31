@@ -1,0 +1,203 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function uid() {
+      return request.auth.uid;
+    }
+
+    function userDocPath(userId) {
+      return /databases/$(database)/documents/Users/$(userId);
+    }
+
+    function userExists(userId) {
+      return exists(userDocPath(userId));
+    }
+
+    function userData(userId) {
+      return get(userDocPath(userId)).data;
+    }
+
+    function isSelf(userId) {
+      return isSignedIn() && uid() == userId;
+    }
+
+    function tokenRole() {
+      return isSignedIn() && request.auth.token.role is string
+        ? request.auth.token.role
+        : null;
+    }
+
+    function tokenAdminRole() {
+      return isSignedIn() && request.auth.token.adminRole is string
+        ? request.auth.token.adminRole
+        : null;
+    }
+
+    function profileRole() {
+      return isSignedIn() && userExists(uid()) ? userData(uid()).role : null;
+    }
+
+    function profileAdminRole() {
+      return isSignedIn() && userExists(uid()) ? userData(uid()).adminRole : null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (tokenRole() == "admin" || profileRole() == "admin");
+    }
+
+    function effectiveAdminRole() {
+      return tokenAdminRole() != null ? tokenAdminRole() : profileAdminRole();
+    }
+
+    function isSuperAdmin() {
+      return isAdmin() && effectiveAdminRole() == "super_admin";
+    }
+
+    function isContentAdmin() {
+      return isAdmin() && effectiveAdminRole() == "content_admin";
+    }
+
+    function isReviewer() {
+      return isAdmin() && effectiveAdminRole() == "reviewer";
+    }
+
+    function canManageOpportunityContent() {
+      return isSuperAdmin() || isContentAdmin();
+    }
+
+    function canReviewOpportunity() {
+      return isSuperAdmin() || isContentAdmin() || isReviewer();
+    }
+
+    function isOpportunityOwner() {
+      return isSignedIn() && resource.data.createdBy == uid();
+    }
+
+    function isOpportunityCreator() {
+      return isSignedIn() && request.resource.data.createdBy == uid();
+    }
+
+    function isPublicOpportunity() {
+      return resource.data.status in ["active", "completed"] ||
+        resource.data.statusWorkflow in ["active", "completed"];
+    }
+
+    function isStatusOnlyOpportunityUpdate() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+        "status",
+        "statusWorkflow",
+        "reviewedAt",
+        "reviewedBy",
+        "rejectionReason",
+        "updatedAt",
+        "approvedAt",
+        "publishedAt",
+        "archivedAt"
+      ]);
+    }
+
+    function isApplicationOwner() {
+      return isSignedIn() && resource.data.userId == uid();
+    }
+
+    function isApplicationCreator() {
+      return isSignedIn() && request.resource.data.userId == uid();
+    }
+
+    function ownsOpportunity(opportunityId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/Opportunities/$(opportunityId)) &&
+        get(/databases/$(database)/documents/Opportunities/$(opportunityId)).data.createdBy == uid();
+    }
+
+    function canReadApplication() {
+      return isApplicationOwner() || isAdmin() || ownsOpportunity(resource.data.opportunityId);
+    }
+
+    function canWriteApplication() {
+      return isApplicationOwner() || isAdmin() || ownsOpportunity(resource.data.opportunityId);
+    }
+
+    match /Users/{userId} {
+      allow read: if isSelf(userId) || isAdmin();
+
+      allow create: if isSelf(userId) &&
+        request.resource.data.role != "admin" &&
+        !("adminRole" in request.resource.data);
+
+      allow update: if (
+        isSelf(userId) &&
+        request.resource.data.role == resource.data.role &&
+        request.resource.data.adminRole == resource.data.adminRole
+      ) || isSuperAdmin();
+
+      allow delete: if isSuperAdmin();
+    }
+
+    match /Users/{userId}/{subCollection=**} {
+      allow read: if isSelf(userId) || isAdmin();
+      allow write: if isSelf(userId) || isSuperAdmin();
+    }
+
+    match /Opportunities/{opportunityId} {
+      allow read: if isPublicOpportunity() || isOpportunityOwner() || isAdmin();
+
+      allow create: if isOpportunityCreator() || canManageOpportunityContent();
+
+      allow update: if isOpportunityOwner() ||
+        canManageOpportunityContent() ||
+        (canReviewOpportunity() && isStatusOnlyOpportunityUpdate());
+
+      allow delete: if isOpportunityOwner() || canManageOpportunityContent();
+    }
+
+    match /Applications/{applicationId} {
+      allow read: if canReadApplication();
+      allow create: if isApplicationCreator();
+      allow update: if canWriteApplication();
+      allow delete: if canWriteApplication();
+    }
+
+    match /Notifications/{userId}/in_App/{notificationId} {
+      allow read, write: if isSelf(userId) || isAdmin();
+    }
+
+    match /AdminNotifications/{notificationId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /SystemConfig/{configId} {
+      allow read: if isAdmin();
+      allow write: if isSuperAdmin();
+    }
+
+    match /Reports/{ownerId}/{reportCollection}/{reportId} {
+      allow create: if isSignedIn() &&
+        (
+          request.resource.data.reporterId == uid() ||
+          isSelf(ownerId) ||
+          isAdmin()
+        );
+      allow read: if isSelf(ownerId) || isAdmin();
+      allow update, delete: if isSelf(ownerId) || isAdmin();
+    }
+
+    match /UserNotifications/{notificationId} {
+      allow read: if isSignedIn() && resource.data.userId == uid() || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /AuditLogs/{logId} {
+      allow read: if isSuperAdmin();
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

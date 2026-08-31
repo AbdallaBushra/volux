@@ -1,0 +1,63 @@
+mutation CreateOpportunity(
+    $organizationId: UUID!,
+    $description: String!,
+    $endTime: Timestamp!,
+    $location: String!,
+    $startTime: Timestamp!,
+    $status: String!,
+    $title: String!
+) @auth(level: USER) {
+  opportunity_insert(data: {
+    organizationId: $organizationId,
+    description: $description,
+    endTime: $endTime,
+    location: $location,
+    startTime: $startTime,
+    status: $status,
+    title: $title
+  })
+}
+
+query ListOpportunities @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  opportunities {
+    id
+    title
+    description
+    location
+    startTime
+    endTime
+    status
+    organization {
+      name
+    }
+  }
+}
+
+mutation ApplyToOpportunity(
+    $opportunityId: UUID!,
+    $userId: UUID!,
+    $applicationDate: Timestamp!,
+    $status: String!
+) @auth(level: USER) {
+  volunteerApplication_insert(data: {
+    opportunityId: $opportunityId,
+    userId: $userId,
+    applicationDate: $applicationDate,
+    status: $status
+  })
+}
+
+query ListApplicationsForUser($userId: UUID!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  volunteerApplications(where: {userId: {eq: $userId}}) {
+    id
+    opportunity {
+      title
+      description
+      location
+      startTime
+      endTime
+    }
+    applicationDate
+    status
+  }
+}
