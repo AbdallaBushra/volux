@@ -5,81 +5,88 @@
 <h1 align="center">Volux</h1>
 
 <p align="center">
-  <strong>أول منصة سودانية رقمية مخصصة لتنظيم التطوع وربط المتطوعين بالمنظمات والفرق التطوعية.</strong>
+  <strong>The first Sudanese digital volunteering platform built to connect volunteers, organizations, teams, and administrators in one trusted ecosystem.</strong>
 </p>
 
 <p align="center">
-  <a href="https://volux.live">volux.live</a>
+  <a href="https://volux.live"><strong>volux.live</strong></a>
 </p>
 
 ---
 
-## نبذة عن المشروع
+## Overview
 
-Volux هي منصة ويب تطوعية تم تصميمها لتكون نقطة مركزية لإدارة العمل التطوعي في السودان. تجمع المنصة بين المتطوعين، المنظمات، الفرق التطوعية، والإدارة في نظام واحد يساعد على نشر الفرص التطوعية، التقديم عليها، متابعة المشاركات، قياس الأثر، ومنح النقاط والشهادات والشارات للمتطوعين بعد إكمال الفرص.
+Volux is a web-based volunteering platform designed for Sudan. It brings volunteers, registered organizations, volunteer teams, and platform administrators into one organized digital space where volunteering opportunities can be published, discovered, managed, completed, and verified.
 
-الفكرة الأساسية للمشروع هي تحويل التطوع من عملية مشتتة تعتمد على الإعلانات اليدوية والمتابعة غير المنظمة إلى تجربة رقمية واضحة وموثوقة، يستطيع فيها كل طرف معرفة دوره، متابعة طلباته، وتوثيق مساهمته في المجتمع.
+The platform was created to make volunteering easier to access, easier to manage, and easier to document. Instead of relying on scattered announcements, manual follow-ups, and untracked participation, Volux provides a structured workflow for registration, approval, opportunity publishing, applications, completion tracking, rewards, certificates, and administrative oversight.
 
-## الرابط الرسمي
+Volux is positioned as the first Sudanese digital platform dedicated to organizing volunteering through a full online system.
+
+## Live Website
 
 - Website: https://volux.live
-- GitHub Repository: https://github.com/AbdallaBushra/volux
-- Firebase Project: `volux-db1`
+- Repository: https://github.com/AbdallaBushra/volux
+- Firebase project: `volux-db1`
 
-## لماذا Volux؟
+## Project Goals
 
-يستهدف Volux معالجة تحديات شائعة في العمل التطوعي، مثل صعوبة الوصول للفرص المناسبة، ضعف توثيق ساعات التطوع، غياب نظام موحد للمكافآت، وصعوبة متابعة أداء المتطوعين والمنظمات والفرق. لذلك يقدم المشروع تجربة منظمة تشمل التسجيل، التحقق، إدارة الفرص، التقديم، الاعتماد، المتابعة، التقارير، والشهادات.
+- Centralize volunteering opportunities in Sudan.
+- Help volunteers find opportunities that match their skills and location.
+- Give organizations and volunteer teams a reliable way to publish and manage opportunities.
+- Document volunteer participation through hours, points, badges, levels, and certificates.
+- Support administrative review, approval, reporting, and quality control.
+- Encourage a culture of transparent, measurable, and trusted volunteering.
 
-## المستخدمون الرئيسيون
+## User Roles
 
-### المتطوعون
+### Volunteers
 
-المتطوع يستطيع إنشاء حساب، استعراض الفرص التطوعية، التقديم على الفرص المناسبة، متابعة مشاركاته، جمع النقاط، الحصول على الشارات، تحميل الشهادات، ومتابعة ترتيبه في لوحة الصدارة.
+Volunteers can create an account, browse available opportunities, apply for suitable opportunities, track their participation history, collect points, earn badges, download certificates, and view their ranking on the leaderboard.
 
-### المنظمات
+### Organizations
 
-المنظمات تستطيع تسجيل حساب مؤسسي، إدخال بيانات الترخيص والتواصل، انتظار موافقة الإدارة، نشر فرص تطوعية، إدارة المتقدمين، قبول أو رفض الطلبات، إنهاء الفرص، وتوثيق مشاركة المتطوعين.
+Organizations can register institutional accounts, submit license and contact details, wait for admin approval, publish volunteering opportunities, manage applicants, accept or reject applications, complete opportunities, and document volunteer participation.
 
-### الفرق التطوعية
+### Volunteer Teams
 
-الفرق التطوعية تستطيع إنشاء ملف فريق، تحديد مجالات العمل، نشر الفرص ضمن نطاق الفريق، إدارة المتطوعين، وتوثيق الأنشطة والإنجازات.
+Volunteer teams can register team profiles, define their fields of work, publish opportunities within their approved scope, manage volunteers, and track team activity.
 
-### الإدارة
+### Administrators
 
-الأدمن يمتلك لوحة تحكم لإدارة المستخدمين، المنظمات، الفرق، الفرص، طلبات التسجيل المعلقة، البلاغات، التقارير، والإعدادات العامة للمنصة.
+Administrators manage users, organizations, teams, opportunities, pending registrations, reports, complaints, platform statistics, and system settings through a dedicated admin dashboard.
 
-## أهم الخصائص
+## Core Features
 
-- تسجيل ودخول للمتطوعين، المنظمات، الفرق، والأدمن.
-- دعم اللغتين العربية والإنجليزية.
-- حماية المسارات حسب نوع المستخدم.
-- تأكيد البريد الإلكتروني قبل استخدام الحساب.
-- مراجعة إدارية للمنظمات والفرق قبل التفعيل.
-- فالديشن على تاريخ انتهاء ترخيص المنظمة لمنع التسجيل بترخيص منتهي.
-- نشر فرص تطوعية ببيانات عربية وإنجليزية.
-- تحديد نوع الفرصة: ميدانية أو افتراضية.
-- تحديد الولاية، الموقع، التاريخ، عدد المتطوعين، الساعات، والوصف.
-- استعراض الفرص العامة مع البحث والتفاصيل.
-- تقديم المتطوعين على الفرص ومتابعة الطلبات.
-- قبول ورفض المتقدمين من جهة المنظمة أو الفريق.
-- إنهاء الفرص وتوزيع النقاط تلقائيا حسب ساعات التطوع.
-- نظام نقاط ومستويات وشارات للمتطوعين.
-- شهادات PDF للمتطوعين بعد إكمال الفرص.
-- لوحة صدارة للمتطوعين حسب النقاط والساعات والإنجازات.
-- نظام بلاغات ومتابعة مخالفات.
-- إشعارات داخل التطبيق.
-- تقارير إدارية وتصدير بيانات.
-- تكامل مع Firebase Authentication وFirestore وStorage.
+- Volunteer, organization, team, and admin authentication.
+- Arabic and English language support.
+- Role-based routing and protected pages.
+- Email verification flow.
+- Admin approval workflow for organizations and teams.
+- Organization license expiry validation during registration.
+- Public opportunities page with search and details.
+- Opportunity creation with Arabic and English content.
+- Field and virtual volunteering opportunity types.
+- State, location, date, duration, hours, and volunteer count fields.
+- Volunteer applications and application tracking.
+- Applicant approval and rejection by organizations or teams.
+- Opportunity completion workflow.
+- Automatic volunteer points calculation based on completed hours.
+- Volunteer levels, badges, and leaderboard.
+- PDF certificate generation.
+- In-app notifications.
+- Complaint and reporting system.
+- Admin reports and data export.
+- Firebase Authentication, Firestore, Storage, Hosting, and Functions integration.
 
-## صور وهوية المشروع
+## Brand Assets
 
-اللوقو الرسمي المستخدم في المشروع:
+The official Volux logo is included in the project:
 
 <p align="center">
   <img src="src/assets/volux-logo2.png" alt="Volux Logo" width="260" />
 </p>
 
-صور وملفات الهوية موجودة داخل:
+Important visual assets are stored in:
 
 - `src/assets/volux-logo.png`
 - `src/assets/volux-logo2.png`
@@ -89,55 +96,66 @@ Volux هي منصة ويب تطوعية تم تصميمها لتكون نقطة 
 - `public/badges/`
 - `public/levels/`
 
-## صفحات ومسارات النظام
+## Application Routes
 
-| المسار | الوصف |
+| Route | Description |
 | --- | --- |
-| `/` | الصفحة الرئيسية والتعريف بالمنصة |
-| `/about` | صفحة عن Volux وفكرة المشروع |
-| `/opportunities` | عرض الفرص التطوعية المتاحة |
-| `/leaderboard` | لوحة الصدارة للمتطوعين |
-| `/register` | تسجيل المتطوعين |
-| `/institution-register` | تسجيل المنظمات |
-| `/team-register` | تسجيل الفرق التطوعية |
-| `/login` | دخول المتطوعين |
-| `/institution-login` | دخول المنظمات |
-| `/team-login` | دخول الفرق |
-| `/admin-login` | دخول الإدارة |
-| `/profile` | ملف المتطوع |
-| `/institution-profile` | ملف المنظمة |
-| `/team-profile` | ملف الفريق |
-| `/opportunities-management` | إدارة الفرص للمنظمات والفرق |
-| `/admin/dashboard` | لوحة تحكم الأدمن |
-| `/admin/users` | إدارة المستخدمين |
-| `/admin/organizations` | إدارة المنظمات |
-| `/admin/teams` | إدارة الفرق |
-| `/admin/opportunities` | إدارة الفرص |
-| `/admin/pending-registrations` | مراجعة طلبات التسجيل |
-| `/admin/reports` | التقارير |
-| `/faq`, `/guidelines`, `/privacy`, `/terms` | صفحات معلومات وسياسات المنصة |
+| `/` | Home page and platform introduction |
+| `/about` | About Volux |
+| `/opportunities` | Public volunteering opportunities |
+| `/leaderboard` | Volunteer leaderboard |
+| `/register` | Volunteer registration |
+| `/institution-register` | Organization registration |
+| `/team-register` | Volunteer team registration |
+| `/login` | Volunteer login |
+| `/institution-login` | Organization login |
+| `/team-login` | Team login |
+| `/admin-login` | Admin login |
+| `/profile` | Volunteer profile |
+| `/institution-profile` | Organization profile |
+| `/team-profile` | Team profile |
+| `/opportunities-management` | Opportunity management for organizations and teams |
+| `/admin/dashboard` | Admin dashboard |
+| `/admin/users` | User management |
+| `/admin/organizations` | Organization management |
+| `/admin/teams` | Team management |
+| `/admin/opportunities` | Opportunity management |
+| `/admin/pending-registrations` | Pending registration review |
+| `/admin/reports` | Reports and analytics |
+| `/admin/settings` | Admin settings |
+| `/faq` | FAQ page |
+| `/guidelines` | Platform guidelines |
+| `/privacy` | Privacy information |
+| `/terms` | Terms and conditions |
 
-## نظام النقاط والمستويات
+## Gamification System
 
-يعتمد Volux على Gamification System لتحفيز المتطوعين وتوثيق أثرهم:
+Volux uses a gamification model to recognize and motivate volunteers.
 
-| المستوى | النقاط المطلوبة |
+### Points
+
+- Each completed volunteering hour gives the volunteer `+2` points.
+- Points are added after an opportunity is completed and participation is verified.
+
+### Levels
+
+| Level | Required Points |
 | --- | --- |
-| Bronze | من 0 إلى 199 نقطة |
-| Silver | من 200 إلى 599 نقطة |
-| Gold | من 600 إلى 1199 نقطة |
-| Platinum | 1200 نقطة فأكثر |
+| Bronze | 0 - 199 |
+| Silver | 200 - 599 |
+| Gold | 600 - 1199 |
+| Platinum | 1200+ |
 
-القواعد الأساسية:
+### Badges
 
-- كل ساعة تطوع تمنح المتطوع `+2` نقاط.
-- إكمال أول فرصة يمنح شارة `First Opportunity`.
-- إكمال 3 فرص يمنح شارة `Active Volunteer`.
-- إكمال 10 فرص يمنح شارة `Opportunity Finisher`.
-- الوصول إلى 500 نقطة يمنح شارة `Impact Maker`.
-- الوصول إلى 1000 نقطة يمنح شارة `Elite Member`.
+- `First Opportunity`: awarded after the first completed opportunity.
+- `Active Volunteer`: awarded after completing 3 opportunities.
+- `Opportunity Finisher`: awarded after completing 10 opportunities.
+- `Impact Maker`: awarded after reaching 500 points.
+- `Trusted Volunteer`: awarded after completing 15 opportunities.
+- `Elite Member`: awarded after reaching 1000 points.
 
-## التقنية المستخدمة
+## Technology Stack
 
 ### Frontend
 
@@ -146,8 +164,9 @@ Volux هي منصة ويب تطوعية تم تصميمها لتكون نقطة 
 - React Icons
 - Chart.js
 - Recharts
-- i18next / react-i18next
-- CSS stylesheets داخل `src/styles`
+- i18next
+- react-i18next
+- CSS stylesheets
 
 ### Backend and Cloud
 
@@ -156,17 +175,18 @@ Volux هي منصة ويب تطوعية تم تصميمها لتكون نقطة 
 - Firebase Storage
 - Firebase Hosting
 - Firebase Functions
-- Express.js backend
-- PDFKit لتوليد شهادات PDF
+- Express.js
+- PDFKit
 
-### Development
+### Development Tools
 
-- Create React App / react-scripts
+- Create React App
+- react-scripts
 - npm
-- TypeScript داخل Firebase Functions وبعض ملفات API
-- Firestore Rules tests
+- TypeScript for Firebase Functions and selected API files
+- Firestore rules tests
 
-## بنية المشروع
+## Project Structure
 
 ```text
 volux/
@@ -201,42 +221,49 @@ volux/
 └── package.json
 ```
 
-## التشغيل المحلي
+## Getting Started
 
-### المتطلبات
+### Requirements
 
 - Node.js
 - npm
 - Firebase project
-- تفعيل Email/Password Authentication في Firebase Console
-- إعداد Firestore وStorage حسب قواعد المشروع
+- Firebase Email/Password authentication enabled
+- Firestore and Storage configured with the project rules
 
-### تشغيل الواجهة
+### Install Dependencies
 
 ```bash
 npm install
+```
+
+### Run the Frontend
+
+```bash
 npm start
 ```
 
-بعد التشغيل افتح:
+Open the app at:
 
 ```text
 http://localhost:3000
 ```
 
-### بناء نسخة الإنتاج
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-ينتج مجلد الإنتاج داخل:
+The production build is generated in:
 
 ```text
 build/
 ```
 
-### تشغيل Express Backend
+## Express Backend
+
+The `server/` directory contains a small Express backend used for backend utilities such as certificate generation.
 
 ```bash
 cd server
@@ -244,21 +271,21 @@ npm install
 npm start
 ```
 
-الـ backend يعمل افتراضيا على:
+Default backend URL:
 
 ```text
 http://localhost:5000
 ```
 
-أهم endpoint موجود حاليا:
+Available certificate endpoint:
 
 ```text
 GET /api/certificates/generate
 ```
 
-ويستخدم لتوليد شهادة PDF للمتطوع.
+## Firebase Functions
 
-### Firebase Functions
+The `functions/` directory contains Firebase Cloud Functions code, Firestore rules tests, and utility scripts.
 
 ```bash
 cd functions
@@ -266,21 +293,21 @@ npm install
 npm run build
 ```
 
-لتشغيل اختبارات قواعد Firestore:
+Run Firestore rules tests:
 
 ```bash
 npm run test:rules
 ```
 
-## إعداد Firebase
+## Firebase Setup
 
-ملف إعداد Firebase موجود في:
+Firebase configuration is located in:
 
 ```text
 src/firebase/firebase.js
 ```
 
-ويستخدم المشروع الخدمات التالية:
+The project uses:
 
 - Authentication
 - Firestore
@@ -288,62 +315,45 @@ src/firebase/firebase.js
 - Hosting
 - Functions
 
-ملاحظات مهمة:
+Security notes:
 
-- Firebase web config ليس بديلا عن قواعد الأمان؛ يجب ضبط Firestore Rules وStorage Rules بشكل صحيح.
-- لا ترفع ملفات service account أو private keys إلى GitHub.
-- ملفات `.env` وملفات build و`node_modules` مستثناة من الرفع عبر `.gitignore`.
+- Firebase web configuration is public by design, but it must be protected with proper Firestore and Storage security rules.
+- Do not commit service account files, private keys, or secret environment files.
+- `node_modules/`, `build/`, `.firebase/`, temporary files, and local project folders are ignored by `.gitignore`.
 
-## النشر
+## Deployment
 
-الدومين الرسمي:
+Official domain:
 
 ```text
 https://volux.live
 ```
 
-خطوات النشر المقترحة عبر Firebase Hosting:
+Firebase Hosting deployment flow:
 
 ```bash
 npm run build
 firebase deploy
 ```
 
-ملف `firebase.json` مضبوط لاستخدام:
+The hosting configuration in `firebase.json` serves the production app from:
 
 ```text
 build/
 ```
 
-كمجلد استضافة.
+## Included Documentation
 
-## التوثيق الموجود
-
-يوجد داخل المشروع أكثر من ملف توثيق مساعد:
+The repository also includes supporting project notes:
 
 - `FIREBASE_STRUCTURE.md`
 - `gamification_rules.md`
 - `CHANGES.md`
 - `README_UPDATES.md`
 
-## بخصوص ملفات SRS وSDD والشباترات
+## Repository Scope
 
-ملفات SRS وSDD وملفات الشباترات ليست مطلوبة لتشغيل المشروع، لكن يمكن رفعها إلى GitHub إذا كانت جزءا من التوثيق الرسمي للمشروع.
-
-الاقتراح الأفضل هو وضعها في مجلد:
-
-```text
-docs/
-├── SRS.pdf
-├── SDD.pdf
-└── chapters/
-```
-
-إذا كانت الملفات تحتوي على بيانات خاصة، أسماء مشرفين، تقييمات، أرقام، أو معلومات غير مخصصة للنشر العام، الأفضل إبقاؤها خارج GitHub أو رفعها فقط داخل repository خاص.
-
-## حالة المستودع
-
-هذا المستودع يحتوي على مشروع Volux فقط. تم استثناء المشاريع والمجلدات المحلية الأخرى مثل:
+This repository is intended to contain the Volux project only. The following local folders are ignored and are not part of this repository:
 
 - `company_agent/`
 - `personal-site/`
@@ -353,16 +363,6 @@ docs/
 - `.firebase/`
 - `tmp/`
 
-## English Summary
+## Ownership
 
-Volux is a Sudan-focused volunteering platform built to connect volunteers, organizations, volunteer teams, and administrators in one digital ecosystem. It supports opportunity publishing, applications, approvals, participation tracking, certificates, points, badges, leaderboards, and administrative oversight.
-
-Official domain:
-
-```text
-https://volux.live
-```
-
-## License and Ownership
-
-Volux is a graduation/project platform developed for organizing and improving digital volunteering in Sudan. All branding, source code, documentation, and project assets belong to the Volux project owner unless stated otherwise.
+Volux is a Sudanese volunteering platform developed to organize and improve digital volunteering workflows in Sudan. All branding, source code, documentation, and project assets belong to the Volux project owner unless stated otherwise.
